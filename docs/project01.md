@@ -1,6 +1,7 @@
 # 概要
 
-- .NET WebアプリをApp Service Webアプリとしてデプロイ
+- アプリの種類: .NET Webアプリ (dotnet new web)
+- App Service Webアプリとしてデプロイ
 - App ConfigurationからBlobのエンドポイントを取得
 - Blobにアクセス
 
