@@ -78,9 +78,9 @@ appsettings.json
   },
   "AllowedHosts": "*"
 }
-
 ```
 
+※AppConfigの値を、実際のApp Configurationのエンドポイントに置換。
 
 Program.cs
 ```csharp
@@ -117,6 +117,16 @@ app.MapGet("/", () =>
 
 app.Run();
 ```
+
+# ローカルでのデバッグ実行
+
+AZ CLIでサインイン
+
+ストレージアカウントのエンドポイントを「blob:uri」というキーでApp Configurationに格納。
+
+# Azureへのデプロイ
+
+
 
 # 参考
 
