@@ -5,7 +5,7 @@
 - App ConfigurationからBlobのエンドポイントを取得
 - Blobにアクセス
 
-# リソース
+# Azureリソース
 
 ```
 App Configuration
