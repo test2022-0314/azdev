@@ -1,0 +1,22 @@
+# プロジェクトを作成
+dotnet new web
+dotnet new gitignore
+dotnet add package Microsoft.ApplicationInsights.AspNetCore
+dotnet add package Microsoft.Extensions.Logging.ApplicationInsights
+
+# Azureリソースを作成
+project=project05
+name="${project}res$(date |md5sum |head -c6)"
+az group create -n $name -l japaneast
+
+az monitor app-insights component create --app $name -l japaneast -g $name
+connection_string=$(az monitor app-insights component show --app $name -g $name --query connectionString --output tsv)
+echo $connection_string
+
+# appsettings.jsonに以下を追記
+```
+  "ApplicationInsights": {
+    "ConnectionString": "..."
+  }
+```
+
