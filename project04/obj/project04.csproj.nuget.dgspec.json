@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[12.11.0, )"
             },
+            "Microsoft.Azure.AppConfiguration.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.Extensions.Configuration.AzureAppConfiguration": {
               "target": "Package",
               "version": "[5.0.0, )"

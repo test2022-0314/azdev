@@ -107,6 +107,21 @@
           "lib/netstandard2.0/Azure.Storage.Common.dll": {}
         }
       },
+      "Microsoft.Azure.AppConfiguration.AspNetCore/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.AzureAppConfiguration": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.Azure.AppConfiguration.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Azure.AppConfiguration.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -472,6 +487,23 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Storage.Common.dll",
         "lib/netstandard2.0/Azure.Storage.Common.xml"
+      ]
+    },
+    "Microsoft.Azure.AppConfiguration.AspNetCore/5.0.0": {
+      "sha512": "SwgyHXZZkEENEEbPlPC2VGbh5B8XT9MFHD1fkF1Z9dlAJTxIMbKZcC4e1RWC5L9ticnkeEMhtv3HCh1WQPi0Ew==",
+      "type": "package",
+      "path": "microsoft.azure.appconfiguration.aspnetcore/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Microsoft.Azure.AppConfiguration.AspNetCore.dll",
+        "lib/net5.0/Microsoft.Azure.AppConfiguration.AspNetCore.xml",
+        "lib/netcoreapp3.1/Microsoft.Azure.AppConfiguration.AspNetCore.dll",
+        "lib/netcoreapp3.1/Microsoft.Azure.AppConfiguration.AspNetCore.xml",
+        "lib/netstandard2.0/Microsoft.Azure.AppConfiguration.AspNetCore.dll",
+        "lib/netstandard2.0/Microsoft.Azure.AppConfiguration.AspNetCore.xml",
+        "microsoft.azure.appconfiguration.aspnetcore.5.0.0.nupkg.sha512",
+        "microsoft.azure.appconfiguration.aspnetcore.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -974,6 +1006,7 @@
     "net6.0": [
       "Azure.Identity >= 1.6.0",
       "Azure.Storage.Blobs >= 12.11.0",
+      "Microsoft.Azure.AppConfiguration.AspNetCore >= 5.0.0",
       "Microsoft.Extensions.Configuration.AzureAppConfiguration >= 5.0.0"
     ]
   },
@@ -1021,6 +1054,10 @@
           "Azure.Storage.Blobs": {
             "target": "Package",
             "version": "[12.11.0, )"
+          },
+          "Microsoft.Azure.AppConfiguration.AspNetCore": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           },
           "Microsoft.Extensions.Configuration.AzureAppConfiguration": {
             "target": "Package",

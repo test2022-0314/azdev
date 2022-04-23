@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UM2y9oWiBFH5x/JqHi9nSDmVeMDSBJwMd1oS9nqHUMFHYZgsDVOqW5a8cn1RB9WMLgAOhJ0vUcvA1kwO1N3TFg==",
+  "dgSpecHash": "YKiouZsxarTeC9nR85xbBFqQiNEGeS/k2tWk6pww4fqagSk2FGUlNlo857bU8TMr95s1kDrXqotL54NtYFpZUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\azureuser\\Documents\\azdev\\project04\\project04.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\azureuser\\.nuget\\packages\\azure.security.keyvault.secrets\\4.0.1\\azure.security.keyvault.secrets.4.0.1.nupkg.sha512",
     "C:\\Users\\azureuser\\.nuget\\packages\\azure.storage.blobs\\12.11.0\\azure.storage.blobs.12.11.0.nupkg.sha512",
     "C:\\Users\\azureuser\\.nuget\\packages\\azure.storage.common\\12.10.0\\azure.storage.common.12.10.0.nupkg.sha512",
+    "C:\\Users\\azureuser\\.nuget\\packages\\microsoft.azure.appconfiguration.aspnetcore\\5.0.0\\microsoft.azure.appconfiguration.aspnetcore.5.0.0.nupkg.sha512",
     "C:\\Users\\azureuser\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\azureuser\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.18\\microsoft.extensions.configuration.3.1.18.nupkg.sha512",
     "C:\\Users\\azureuser\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.18\\microsoft.extensions.configuration.abstractions.3.1.18.nupkg.sha512",

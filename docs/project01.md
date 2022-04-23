@@ -5,6 +5,20 @@
 - App ConfigurationからBlobのエンドポイントを取得
 - Blobにアクセス
 
+# このプロジェクトで新しく学ぶこと
+
+BlobのエンドポイントをApp Configurationに入れることで、プロジェクト側にBlobエンドポイントなどの情報を持たせないようにする。
+
+設定値をApp Configurationで管理することで、将来の設定値の変更に対して対処できるようになる。
+
+App Configurationの基本的な使い方（キーを指定して値を読み込む）
+
+App Configurationのエンドポイントはappsettings.jsonに持たせる。
+
+# このプロジェクト実施前の前提となる知識
+
+
+
 # Azureリソース
 
 ```
@@ -47,6 +61,25 @@ role="App Configuration Data Reader"
 az role assignment create --role "$role" --assignee $webapp_principal_id --scope $appconfig_id
 ```
 
+
+# リソース/データの設定
+
+```
+# ストレージアカウントのBlobエンドポイントをApp Configurationに設定
+appconfig_endpoint=$(az appconfig show -n $name --query endpoint --output tsv)
+storage_endpoint=$(az storage account show -n $name --query 'primaryEndpoints.blob' --output tsv)
+az appconfig kv set -n $name --key 'blob:endpoint' --value $storage_endpoint --yes
+
+# Blobコンテナーを適当にいくつか作成
+
+az storage container create --auth-mode login --account-name $name -n test1
+az storage container create --auth-mode login --account-name $name -n test2
+az storage container create --auth-mode login --account-name $name -n test3
+
+# App Configurationのエンドポイントを表示（appsettings.jsonに記入）
+echo $appconfig_endpoint
+```
+
 # プロジェクトの作成
 
 ローカルで実行
@@ -55,6 +88,7 @@ az role assignment create --role "$role" --assignee $webapp_principal_id --scope
 mkdir ~/Documents/azdev/project04
 cd ~/Documents/azdev/project04
 dotnet new web
+dotnet new gitignore
 dotnet add package Azure.Identity --version 1.6.0
 dotnet add package Azure.Storage.Blobs --version 12.11.0
 # dotnet add package Azure.Data.AppConfiguration --version 1.2.0
@@ -110,7 +144,7 @@ var config = app.Services.GetRequiredService<IConfiguration>();
 
 app.MapGet("/", () =>
 {
-    var uri = new Uri(config["blob:uri"]);
+    var uri = new Uri(config["blob:endpoint"]);
     var client = new BlobServiceClient(uri, credential);
     return client.GetBlobContainers().Count() + " container(s)";
 });
@@ -122,11 +156,9 @@ app.Run();
 
 AZ CLIでサインイン
 
-ストレージアカウントのエンドポイントを「blob:uri」というキーでApp Configurationに格納。
-
 # Azureへのデプロイ
 
-
+VSCodeのExplorerで、ファイルやフォルダ一覧の下部の空白部分を右クリックし、「Deploy to Web App...」でデプロイ。
 
 # 参考
 

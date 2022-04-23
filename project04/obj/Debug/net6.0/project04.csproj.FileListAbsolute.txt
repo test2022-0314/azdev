@@ -35,3 +35,4 @@ C:\Users\azureuser\Documents\azdev\project04\obj\Debug\net6.0\refint\project04.d
 C:\Users\azureuser\Documents\azdev\project04\obj\Debug\net6.0\project04.pdb
 C:\Users\azureuser\Documents\azdev\project04\obj\Debug\net6.0\project04.genruntimeconfig.cache
 C:\Users\azureuser\Documents\azdev\project04\obj\Debug\net6.0\ref\project04.dll
+C:\Users\azureuser\Documents\azdev\project04\bin\Debug\net6.0\Microsoft.Azure.AppConfiguration.AspNetCore.dll
